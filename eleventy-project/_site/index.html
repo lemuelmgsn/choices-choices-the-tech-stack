@@ -1,5 +1,156 @@
 <!doctype html>
-<link rel="stylesheet" href="style.css">
-
 <title>Page title</title>
-<p>Hoi</p>
+<link rel="stylesheet" href="/style.css">
+
+<script>
+
+    import { onMount } from 'svelte';
+  
+    let currentSlide = 0;
+  
+    onMount(() => {
+      const carousel = document.querySelector('.carousel');
+      const indicators = document.querySelectorAll('.indicator');
+  
+      const buttons = document.querySelectorAll('.carousel-button');
+      buttons.forEach(button => {
+        button.addEventListener('click', function () {
+          const direction = this.classList.contains('left') ? -1 : 1;
+          scrollCarousel(carousel, direction);
+          updateIndicators();
+        });
+      });
+  
+      function scrollCarousel(carousel, direction) {
+        const scrollAmount = carousel.clientWidth;
+        carousel.scrollBy({
+          left: direction * scrollAmount,
+          behavior: 'smooth',
+        });
+  
+        // Update the current slide index
+        currentSlide = (currentSlide + direction + indicators.length) % indicators.length;
+      }
+  
+      function updateIndicators() {
+        indicators.forEach((indicator, index) => {
+          if (index === currentSlide) {
+            indicator.classList.add('active');
+          } else {
+            indicator.classList.remove('active');
+          }
+        });
+      }
+  
+      // Maak indicators clickable
+      indicators.forEach(indicator => {
+        indicator.addEventListener('click', function () {
+          const targetSlide = Number(this.dataset.slide);
+          const difference = targetSlide - currentSlide;
+  
+          scrollCarousel(carousel, difference);
+          currentSlide = targetSlide;
+          updateIndicators();
+        });
+      });
+    });
+  </script>
+    
+   
+   <!-- carousel 1: shirts -->
+    <div class="carousel-container">
+      <!-- <button type="button" class="carousel-button left" aria-label="left-button">o</button> -->
+          <section>
+              <ul class="carousel">
+                <li>
+                    <section>
+                      <a href="/sign-up-1">Skip</a>
+                      <div class="mouse">
+                          <picture class="eclipse">
+                              <source srcset="/characters/Ellipse131.svg?format=avif" type="image/avif">
+                              <source srcset="/characters/Ellipse131.svg?format=webp">
+                              <img src="h/characters/Ellipse131.svg" alt="eclipse" loading="lazy" width="250">
+                          </picture>
+                          <picture class="rat">
+                              <source srcset="/characters/mouse.svg?format=avif" type="image/avif">
+                              <source srcset="/characters/mouse.svg?format=webp">
+                              <!-- svelte-ignore a11y-img-redundant-alt -->
+                              <img src="/characters/mouse.svg" alt="rat image" height="250">
+                          </picture>
+                      </div>
+                    
+                      <h1>Learn languages</h1>
+                      <p>
+                          Every household is different. Some only speak one language, others even as much as three!
+                          Learning more than one language has great neurological benefits for anyone at any age. With TuMi Mundo your child can learn up to 3 languages.
+                      </p>
+                      <!-- <a href="/onboarding-2">Continue</a> -->
+                      <button type="button" class="carousel-button right button-1" data-target=".carousel" aria-label="right-button">Continue</button>  
+                  </section>
+                </li>
+  
+                <li>
+                    <section class="slide-2">
+                      <a href="/sign-up-1">Skip</a>
+                        <div class="mouse">
+                            <picture class="eclipse">
+                                <source srcset="/characters/Ellipse131-2.svg?format=avif" type="image/avif">
+                                <source srcset="/characters/Ellipse131-2.svg?format=webp">
+                                <img src="h/characters/Ellipse131-2.svg" alt="eclipse" loading="lazy" width="250">
+                            </picture>
+                            <picture class="rat">
+                                <source srcset="/characters/mouse.svg?format=avif" type="image/avif">
+                                <source srcset="/characters/mouse.svg?format=webp">
+                                <!-- svelte-ignore a11y-img-redundant-alt -->
+                                <img src="/characters/mouse.svg" alt="rat image" height="250">
+                            </picture>
+                        </div>
+                    
+                          <h1>Test the progress</h1>
+                              <p>
+                                  During the learning journal you can measure the improvement of your child.  
+                                  There is an option to share the data with researchers to further improve the method and participate in special researches! You can manage the option to share your data at any given time in the app.
+                              </p>
+                      <!-- <a href="/onboarding-3">Continue</a> -->
+                      <button type="button" class="carousel-button right button-2" data-target=".carousel" aria-label="right-button">Continue</button>  
+                  </section>
+                </li>
+  
+                <li>
+                    <section class="slide-3">
+                      <a href="/sign-up-1">Skip</a>
+                      <div class="mouse">
+                          <picture class="eclipse">
+                              <source srcset="/characters/Ellipse131-3.svg?format=avif" type="image/avif">
+                              <source srcset="/characters/Ellipse131-3.svg?format=webp">
+                              <img src="h/characters/Ellipse131-3.svg" alt="eclipse" loading="lazy" width="250">
+                          </picture>
+                          <picture class="rat">
+                              <source srcset="/characters/mouse.svg?format=avif" type="image/avif">
+                              <source srcset="/characters/mouse.svg?format=webp">
+                              <!-- svelte-ignore a11y-img-redundant-alt -->
+                              <img src="/characters/mouse.svg" alt="rat image" height="250">
+                          </picture>
+                      </div>
+  
+                      <!-- Carousel Indicators -->
+                      <div class="carousel-indicators">
+                        <span class="indicator active" data-slide="0"></span>
+                        <span class="indicator" data-slide="1"></span>
+                        <span class="indicator" data-slide="2"></span>
+                      </div>
+                    
+                      <h1>See the results</h1>
+                          <p>
+                              See the results of the tests and watch as your child learns a language with TuMi Mundo.
+                              The older your child becomes the further into the method you go, it starts with listening, it ends with being able to have a full conversation.
+                          </p>
+                      <a href="/sign-up-1" class="make-acc">Make an account</a>
+                  </section>
+                </li>
+              </ul>
+          </section>
+    </div>
+
+
+  
