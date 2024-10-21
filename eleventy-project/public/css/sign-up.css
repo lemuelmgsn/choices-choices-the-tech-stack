@@ -3,6 +3,9 @@
     margin: 0;
     font-family: Poppins;
 }
+.label-p, .h1-black{
+    color: black;
+}
 section, form{
     display: flex;
     flex-direction: column;
@@ -13,6 +16,7 @@ section {
 }
 form {
     flex-grow: 1;
+    color: black;
 }
 .heading{
     display: flex;
