@@ -3,104 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">   
+    <link rel="stylesheet" href="/css/style.css"/>
     <title>Tumi Mundo</title>
 </head>
 
 <body>
-    <header>
-        <h1>We Love Web Notes</h1>
-    </header>
+    
 
-    <main>
-        <h1>Tech stack</h1>
-<p>techlead van Triple</p>
-<ol>
-<li>Triple</li>
-<li>Webteam</li>
-<li>Over</li>
-<li>Way of working</li>
-<li>Tech stack</li>
-<li>Tech tips</li>
-</ol>
-<h2>Triple</h2>
-<p>25 jaar
-250+ tech &amp; design liefhebbers</p>
-<p>Onze core
-Development - Design - Technical Operations - Data &amp; Insights</p>
-<p>Cultuur
-mooie dingen maken met leuke mensen
-We delen onze ervaringen, projecten en innovaties met elkaar... en met jou...
-We zoeken conferenties op om geinspireerd en up-to-date te blijven
-Gek op feestjes en missen geen moment pm er een te vieren!</p>
-<h2>Webteam</h2>
-<p>Competentie
-Web
-React/Svelte
-Afhankelijk van type project
-Bestaat het al? Vaak React -&gt; Dus blijft React
-Nieuw?
-Enkel React als er afhankelijkheid is van een oud project, of samen gaat</p>
-<p>SmartTV
-- &quot;Gewoon&quot; een website
-- Niet zo smart
-- Oud
-- Svelte
-- Lightweight
-- Build naar HTML, JS, &amp; CSS, geen grote bundle files
-- Betere performance
-- Weinig RAM en geheuge</p>
-<p>React Native
-React Native
-React basics
-Styling werkt wat anders
-Mogelijkheid tot native componenten inladen/gebruiken
-Data picker,numbered input etc.
-Native code (swift,gotlin) kan ook zelf geschreven worden
-Een manier om apps voor beide platformen tegelijk te bouwen met een shared laag
-Nieuwste competentie</p>
-<h2>Way of Working</h2>
-<p>Scrum
-Daily standup
-Refinements
-Retrospects
-Sorint review/planning
-Techlead &amp; product owner rol
-JIRA -&gt; Ticket managemant (Zoals Trello)
-GIT -&gt; Code reviews
-Conventional Commits</p>
-<h2>Tech Stack</h2>
-<p>Web - React Native - Smart TV</p>
-<p>Web</p>
-<p>React
-Web/React Native</p>
-<h3>De gemene deler</h3>
-<p>Elke competentie werkt met dezelfde taal
-kennissessies zijn belangrijk
-coding guidelnes zijn deelbaar</p>
-<h3>De verschillen</h3>
-<p>Elk team werkt aan een ander type product
-Elke product heeft zijn bijzonderheden
-Native Elementen -&gt; React Native
-Support oude browsers -&gt; SmartTV
-Elk product heeft andere afhankelijkheden
-API
-Etc.</p>
-<h3>Wat kan invloed hebben op je tech-stack?</h3>
-<p>SEO Performance
-Machines met weinig performance?
-Eenmalige website?
-Wens voor animaties?</p>
-<h2>Tech tips</h2>
-<p>Dont repeat yourself - niet steeds opnieuw doen, ergens documenteren om het te hergebruiken
-Gebruik van componenten si heilig, het framework waarin je giet staat hier los van.</p>
-<p>Webcomponents</p>
-<p>hoe leer je 2 talen tijdens je stage?</p>
-<p>gewoon dingen doen.
-Lezen en gelijk toepassen</p>
+    
 
-    </main>
+ <!-- carousel 1: shirts -->
+  <div class="carousel-container">
+    <!-- <button type="button" class="carousel-button left" aria-label="left-button">o</button> -->
+        <section>
+            <ul class="carousel">
+              <li>
+                  <section>
+                    <a href="/sign-up-1">Skip</a>
+                    <div class="mouse">
+                        <picture class="eclipse">
+                            <source srcset="/characters/Ellipse131.svg?format=avif" type="image/avif">
+                            <source srcset="/characters/Ellipse131.svg?format=webp">
+                            <img src="h/characters/Ellipse131.svg" alt="eclipse" loading="lazy" width="250">
+                        </picture>
+                        <picture class="rat">
+                            <source srcset="/characters/mouse.svg?format=avif" type="image/avif">
+                            <source srcset="/characters/mouse.svg?format=webp">
+                            <!-- svelte-ignore a11y-img-redundant-alt -->
+                            <img src="/characters/mouse.svg" alt="rat image" height="250">
+                        </picture>
+                    </div>
+                  
+                    <h1>Learn languages</h1>
+                    <p>
+                        Every household is different. Some only speak one language, others even as much as three!
+                        Learning more than one language has great neurological benefits for anyone at any age. With TuMi Mundo your child can learn up to 3 languages.
+                    </p>
+                    <!-- <a href="/onboarding-2">Continue</a> -->
+                    <button type="button" class="carousel-button right button-1" data-target=".carousel" aria-label="right-button">Continue</button>  
+                </section>
+              </li>
 
+              <li>
+                  <section class="slide-2">
+                    <a href="/sign-up-1">Skip</a>
+                      <div class="mouse">
+                          <picture class="eclipse">
+                              <source srcset="/characters/Ellipse131-2.svg?format=avif" type="image/avif">
+                              <source srcset="/characters/Ellipse131-2.svg?format=webp">
+                              <img src="h/characters/Ellipse131-2.svg" alt="eclipse" loading="lazy" width="250">
+                          </picture>
+                          <picture class="rat">
+                              <source srcset="/characters/mouse.svg?format=avif" type="image/avif">
+                              <source srcset="/characters/mouse.svg?format=webp">
+                              <!-- svelte-ignore a11y-img-redundant-alt -->
+                              <img src="/characters/mouse.svg" alt="rat image" height="250">
+                          </picture>
+                      </div>
+                  
+                        <h1>Test the progress</h1>
+                            <p>
+                                During the learning journal you can measure the improvement of your child.  
+                                There is an option to share the data with researchers to further improve the method and participate in special researches! You can manage the option to share your data at any given time in the app.
+                            </p>
+                    <!-- <a href="/onboarding-3">Continue</a> -->
+                    <button type="button" class="carousel-button right button-2" data-target=".carousel" aria-label="right-button">Continue</button>  
+                </section>
+              </li>
+
+              <li>
+                  <section class="slide-3">
+                    <a href="/sign-up-1">Skip</a>
+                    <div class="mouse">
+                        <picture class="eclipse">
+                            <source srcset="/characters/Ellipse131-3.svg?format=avif" type="image/avif">
+                            <source srcset="/characters/Ellipse131-3.svg?format=webp">
+                            <img src="h/characters/Ellipse131-3.svg" alt="eclipse" loading="lazy" width="250">
+                        </picture>
+                        <picture class="rat">
+                            <source srcset="/characters/mouse.svg?format=avif" type="image/avif">
+                            <source srcset="/characters/mouse.svg?format=webp">
+                            <!-- svelte-ignore a11y-img-redundant-alt -->
+                            <img src="/characters/mouse.svg" alt="rat image" height="250">
+                        </picture>
+                    </div>
+
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators">
+                      <span class="indicator active" data-slide="0"></span>
+                      <span class="indicator" data-slide="1"></span>
+                      <span class="indicator" data-slide="2"></span>
+                    </div>
+                  
+                    <h1>See the results</h1>
+                        <p>
+                            See the results of the tests and watch as your child learns a language with TuMi Mundo.
+                            The older your child becomes the further into the method you go, it starts with listening, it ends with being able to have a full conversation.
+                        </p>
+                    <a href="/sign-up-1" class="make-acc">Make an account</a>
+                </section>
+              </li>
+            </ul>
+        </section>
+
+  </div>
 
 </body>
 </html>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  let currentSlide = 0;
+
+  const carousel = document.querySelector('.carousel');
+  const indicators = document.querySelectorAll('.indicator');
+  const buttons = document.querySelectorAll('.carousel-button');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', function () {
+      const direction = this.classList.contains('left') ? -1 : 1;
+      scrollCarousel(direction);
+      updateIndicators();
+    });
+  });
+
+  function scrollCarousel(direction) {
+    const scrollAmount = carousel.clientWidth;
+    carousel.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth',
+    });
+
+    // Update the current slide index
+    currentSlide = (currentSlide + direction + indicators.length) % indicators.length;
+  }
+
+  function updateIndicators() {
+    indicators.forEach((indicator, index) => {
+      if (index === currentSlide) {
+        indicator.classList.add('active');
+      } else {
+        indicator.classList.remove('active');
+      }
+    });
+  }
+
+  // Make indicators clickable
+  indicators.forEach(indicator => {
+    indicator.addEventListener('click', function () {
+      const targetSlide = Number(this.dataset.slide);
+      const difference = targetSlide - currentSlide;
+
+      scrollCarousel(difference);
+      currentSlide = targetSlide;
+      updateIndicators();
+    });
+  });
+});
+
+</script>
