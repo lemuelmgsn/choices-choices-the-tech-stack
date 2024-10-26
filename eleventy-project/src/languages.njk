@@ -1,0 +1,11 @@
+---
+layout: 'base.njk'
+---
+
+<ul>
+  {% for language in tm24_language %}
+    <li>
+      <h2>{{ language.name }}</h2>
+    </li>
+  {% endfor %}
+</ul>
