@@ -1,11 +1,24 @@
 ---
+title: Languages
 layout: 'base.njk'
+css: '/languages.css'
 ---
 
-<ul>
-  {% for language in languages %}
-    <li>
-      <h2>{{ language.name }}</h2>
-    </li>
-  {% endfor %}
-</ul>
+
+<section>
+<h1>We are going to learn!</h1>
+<p>Now it is time to pick the language(s) your child will learn. You can pick a <strong>maximum of 3</strong> languages.</p>
+
+<input type="text" placeholder="Search language">
+  <ul>
+    {% for language in languages %}
+      <li>
+         <input class="radio" type="checkbox" id="language-{{ language.id }}" name="language" value="{{ language.name }}">
+        <label for="language-{{ language.id }}"><strong>{{ language.name }}</strong></label>
+      </li>
+    {% endfor %}
+  </ul>
+
+<input type="submit" value="Continue">
+
+</section>
